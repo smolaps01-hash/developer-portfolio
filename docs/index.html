@@ -3,124 +3,187 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Портфолио: Python-автоматизация, Telegram-боты и адаптивные веб-страницы.">
-  <meta name="theme-color" content="#101828">
-  <title>Павел — автоматизация, Telegram-боты и веб</title>
+  <meta name="description" content="Павел помогает автоматизировать отчёты, собрать Telegram-бота или небольшую веб-страницу. Открытый код, тесты и понятные границы работы.">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Павел — автоматизация, Telegram-боты и веб-инструменты">
+  <meta property="og:description" content="Небольшие цифровые задачи с проверяемым результатом: код, инструкция и тесты.">
+  <meta property="og:url" content="https://smolaps01-hash.github.io/developer-portfolio/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://smolaps01-hash.github.io/developer-portfolio/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <title>Павел — автоматизация, Telegram-боты и веб-инструменты</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Павел",
+    "url": "https://smolaps01-hash.github.io/developer-portfolio/",
+    "sameAs": ["https://github.com/smolaps01-hash"],
+    "jobTitle": "Разработчик Python-автоматизации, Telegram-ботов и веб-инструментов",
+    "knowsAbout": ["Python", "автоматизация", "Telegram-боты", "HTML", "CSS", "JavaScript"]
+  }
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#projects">Перейти к проектам</a>
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="В начало">PS<span>.</span></a>
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+
+  <header class="topbar" id="top">
+    <a class="brand" href="#top" aria-label="Павел — в начало страницы">PS<span>.</span></a>
     <nav aria-label="Основная навигация">
-      <a href="#projects">Проекты</a>
-      <a href="#process">Как работаю</a>
-      <a class="nav-cta" href="https://github.com/smolaps01-hash/developer-portfolio/issues/new?template=project_request.yml">Описать задачу</a>
+      <a href="#services">Задачи</a>
+      <a href="#projects">Примеры</a>
+      <a href="#process">Процесс</a>
+      <a class="nav-cta" href="#brief">Сформировать заявку</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main id="main-content">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span aria-hidden="true"></span> Небольшие задачи с понятным результатом</p>
-        <h1 id="hero-title">Убираю ручную работу с помощью <em>Python, ботов и веб-инструментов</em></h1>
-        <p class="lead">Делаю компактные решения, которые можно проверить: фиксирую объём, добавляю инструкцию запуска и покрываю критичную логику тестами.</p>
+        <p class="eyebrow"><span aria-hidden="true"></span> Открыт к небольшим проектам</p>
+        <h1 id="hero-title">Превращаю ручную рутину в <em>понятный рабочий инструмент</em></h1>
+        <p class="lead">Автоматизирую отчёты, собираю Telegram-ботов и компактные веб-страницы. До начала работы фиксируем результат, а при передаче вы получаете код, инструкцию и проверку критичных сценариев.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">Посмотреть работы</a>
-          <a class="button secondary" href="https://github.com/smolaps01-hash/developer-portfolio">Открыть GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button primary" href="#brief">Сформировать заявку <span aria-hidden="true">→</span></a>
+          <a class="button secondary" href="#projects">Посмотреть примеры</a>
         </div>
-        <ul class="trust-list" aria-label="Принципы">
-          <li>Без вымышленных кейсов</li>
-          <li>Без секретов в коде</li>
-          <li>С автоматической проверкой</li>
+        <ul class="trust-list" aria-label="Ключевые принципы">
+          <li>Проверяемый результат</li>
+          <li>Честные ограничения</li>
+          <li>Без скрытых зависимостей</li>
         </ul>
       </div>
-      <aside class="terminal-card" aria-label="Пример проверки проекта">
-        <div class="terminal-head"><i></i><i></i><i></i><span>portfolio / tests</span></div>
-        <div class="terminal-body">
-          <p><b>$</b> python -m unittest discover -s tests -v</p>
-          <p><span>✓</span> CSV validation</p>
-          <p><span>✓</span> phone normalization</p>
-          <p><span>✓</span> accessible forms</p>
-          <p><span>✓</span> local assets</p>
-          <div class="terminal-result">Ran 12 tests <strong>OK</strong></div>
-        </div>
+
+      <aside class="proof-card" aria-label="Что входит в результат">
+        <div class="proof-card-head"><span class="status-dot" aria-hidden="true"></span><span>Стандарт передачи</span><b>READY</b></div>
+        <ol class="proof-flow">
+          <li><span>01</span><div><b>Согласованный результат</b><small>Что должно работать и как это проверить</small></div></li>
+          <li><span>02</span><div><b>Исходный код</b><small>Без паролей и токенов внутри</small></div></li>
+          <li><span>03</span><div><b>Инструкция запуска</b><small>Шаги и необходимые настройки</small></div></li>
+          <li><span>04</span><div><b>Проверка сценариев</b><small>Автотесты там, где они действительно полезны</small></div></li>
+        </ol>
+        <div class="terminal-line"><span>$</span> python -m unittest <b>17 tests · OK</b></div>
       </aside>
     </section>
 
-    <section class="stats" aria-label="Краткая статистика">
-      <div><strong>3</strong><span>готовых примера</span></div>
-      <div><strong>12</strong><span>автотестов</span></div>
-      <div><strong>0</strong><span>секретов в коде</span></div>
-      <div><strong>CI</strong><span>проверка каждого обновления</span></div>
+    <section class="evidence" aria-label="Проверяемые факты">
+      <a href="#projects"><strong>3</strong><span>рабочих примера</span></a>
+      <a href="https://github.com/smolaps01-hash/developer-portfolio/actions"><strong>17</strong><span>автотестов в CI</span></a>
+      <a href="https://github.com/smolaps01-hash/developer-portfolio"><strong>Open</strong><span>весь код открыт</span></a>
+      <a href="https://github.com/smolaps01-hash/developer-portfolio/blob/main/SECURITY.md"><strong>Safe</strong><span>правила безопасности</span></a>
     </section>
 
-    <section class="section" id="projects" aria-labelledby="projects-title">
+    <section class="section" id="services" aria-labelledby="services-title">
       <div class="section-heading">
-        <div>
-          <p class="eyebrow">Проверяемые примеры</p>
-          <h2 id="projects-title">Что уже работает</h2>
-        </div>
-        <p>Каждый проект лежит в открытом репозитории: можно посмотреть код, тесты и ограничения.</p>
+        <div><p class="eyebrow">С чем можно обратиться</p><h2 id="services-title">Задачи с чётким входом и выходом</h2></div>
+        <p>На старте не нужно составлять техническое задание. Достаточно показать, что сейчас приходится делать вручную, и описать желаемый результат.</p>
       </div>
-
-      <div class="project-grid">
-        <article class="project-card accent-blue">
-          <div class="project-top"><span class="project-number">01</span><span class="project-type">Python · CSV</span></div>
-          <h3>Автоматический отчёт</h3>
-          <p>Проверяет структуру выгрузки, считает суммы по статусам и формирует предсказуемый JSON.</p>
-          <ul><li>Decimal без ошибок округления</li><li>Понятные ошибки входных данных</li><li>4 автоматических теста</li></ul>
-          <a href="https://github.com/smolaps01-hash/developer-portfolio/tree/main/csv_automation">Смотреть код <span aria-hidden="true">→</span></a>
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">01</span><h3>Автоматизация CSV и Excel</h3>
+          <p>Обработка выгрузок, проверка данных, расчёты и формирование повторяемого отчёта.</p>
+          <dl><div><dt>На входе</dt><dd>обезличенный пример файла</dd></div><div><dt>На выходе</dt><dd>скрипт, отчёт и инструкция</dd></div></dl>
         </article>
-
-        <article class="project-card accent-violet">
-          <div class="project-top"><span class="project-number">02</span><span class="project-type">Python · Telegram</span></div>
-          <h3>Бот для заявок</h3>
-          <p>Пошагово собирает контакт, проверяет телефон и сохраняет заявку в локальную базу SQLite.</p>
-          <ul><li>aiogram 3 и FSM-сценарий</li><li>Токен только через окружение</li><li>5 автоматических тестов</li></ul>
-          <a href="https://github.com/smolaps01-hash/developer-portfolio/tree/main/telegram_lead_bot">Смотреть код <span aria-hidden="true">→</span></a>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">02</span><h3>Telegram-бот для сценария</h3>
+          <p>Сбор заявок, анкета, уведомления или пошаговый диалог с сохранением данных.</p>
+          <dl><div><dt>На входе</dt><dd>сценарий диалога и поля</dd></div><div><dt>На выходе</dt><dd>бот, настройки и инструкция</dd></div></dl>
         </article>
-
-        <article class="project-card accent-orange">
-          <div class="project-top"><span class="project-number">03</span><span class="project-type">HTML · CSS · JS</span></div>
-          <h3>Адаптивный лендинг</h3>
-          <p>Одностраничная витрина услуги с мобильной навигацией и доступной проверкой формы.</p>
-          <ul><li>Без фреймворков и трекеров</li><li>Семантичная разметка</li><li>3 автоматических теста</li></ul>
-          <a href="https://github.com/smolaps01-hash/developer-portfolio/tree/main/landing">Смотреть код <span aria-hidden="true">→</span></a>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">03</span><h3>Лендинг или веб-доработка</h3>
+          <p>Адаптивная страница, форма, калькулятор или компактный интерфейс без лишней сложности.</p>
+          <dl><div><dt>На входе</dt><dd>цель, текст и примеры</dd></div><div><dt>На выходе</dt><dd>страница, исходники и проверка</dd></div></dl>
         </article>
       </div>
+      <p class="scope-note"><b>Важно:</b> стоимость и срок называются после просмотра входных данных. Хостинг, платные сервисы и постоянная поддержка оцениваются отдельно.</p>
+    </section>
+
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Код вместо обещаний</p><h2 id="projects-title">Три проверяемых примера</h2></div>
+        <p>Это демонстрационные проекты, а не вымышленные клиентские кейсы. В каждом открыт код, описана задача и есть автоматическая проверка.</p>
+      </div>
+      <div class="case-list">
+        <article class="case-card accent-blue">
+          <div class="case-index"><span>01</span><b>Python · CSV</b></div>
+          <div class="case-main"><p class="case-label">Демонстрационный проект</p><h3>CSV превращается в проверенный JSON-отчёт</h3><p>Скрипт проверяет обязательные столбцы и значения, безопасно считает денежные суммы и группирует их по статусам.</p></div>
+          <div class="case-proof"><ul><li><b>Вход:</b> CSV-выгрузка</li><li><b>Результат:</b> предсказуемый JSON</li><li><b>Проверка:</b> 4 автотеста</li></ul><a href="https://github.com/smolaps01-hash/developer-portfolio/tree/main/csv_automation">Код и инструкция <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="case-card accent-violet">
+          <div class="case-index"><span>02</span><b>Python · Telegram</b></div>
+          <div class="case-main"><p class="case-label">Демонстрационный проект</p><h3>Бот собирает заявку по шагам и сохраняет её</h3><p>Диалог запрашивает имя, телефон и задачу, нормализует номер и записывает результат в локальную SQLite-базу.</p></div>
+          <div class="case-proof"><ul><li><b>Сценарий:</b> FSM на aiogram 3</li><li><b>Данные:</b> SQLite</li><li><b>Проверка:</b> 5 автотестов</li></ul><a href="https://github.com/smolaps01-hash/developer-portfolio/tree/main/telegram_lead_bot">Код и инструкция <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="case-card accent-orange">
+          <div class="case-index"><span>03</span><b>HTML · CSS · JS</b></div>
+          <div class="case-main"><p class="case-label">Демонстрационный проект</p><h3>Адаптивный лендинг работает без фреймворков</h3><p>Семантичная страница подстраивается под телефон и компьютер, а форма сообщает результат доступным способом.</p></div>
+          <div class="case-proof"><ul><li><b>Зависимости:</b> нет</li><li><b>Трекеры:</b> нет</li><li><b>Проверка:</b> 8 автотестов</li></ul><a href="https://github.com/smolaps01-hash/developer-portfolio/tree/main/landing">Код и инструкция <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="deliverables" aria-labelledby="deliverables-title">
+      <div class="deliverables-copy"><p class="eyebrow">Что вы получите</p><h2 id="deliverables-title">Результат, который можно принять и использовать</h2><p>Состав передачи фиксируется до начала разработки. Для типовой небольшой задачи он выглядит так.</p></div>
+      <ul class="check-grid">
+        <li><span>✓</span><div><b>Рабочий результат</b><small>по согласованным сценариям</small></div></li>
+        <li><span>✓</span><div><b>Исходный код</b><small>в понятной структуре</small></div></li>
+        <li><span>✓</span><div><b>Инструкция</b><small>по запуску и настройке</small></div></li>
+        <li><span>✓</span><div><b>Границы работы</b><small>что входит, а что остаётся отдельно</small></div></li>
+      </ul>
     </section>
 
     <section class="section process" id="process" aria-labelledby="process-title">
-      <div class="section-heading">
-        <div><p class="eyebrow">Без сюрпризов</p><h2 id="process-title">Как проходит небольшая задача</h2></div>
-        <p>Сначала договариваемся о результате — только потом начинается разработка.</p>
-      </div>
+      <div class="section-heading"><div><p class="eyebrow">Без сюрпризов</p><h2 id="process-title">Как проходит работа</h2></div><p>На каждом этапе есть понятный результат. Если входных данных недостаточно, это выясняется до начала разработки.</p></div>
       <ol class="steps">
-        <li><span>01</span><div><h3>Разбираю задачу</h3><p>Уточняю входные данные, ограничения, срок и критерии готовности.</p></div></li>
-        <li><span>02</span><div><h3>Фиксирую объём</h3><p>Делю работу на понятные части и обозначаю, что не входит в текущий этап.</p></div></li>
-        <li><span>03</span><div><h3>Делаю и проверяю</h3><p>Пишу код, проверяю критичные сценарии и готовлю инструкцию запуска.</p></div></li>
-        <li><span>04</span><div><h3>Передаю результат</h3><p>Показываю, как проверить работу, и перечисляю возможные следующие улучшения.</p></div></li>
+        <li><span>01</span><div><h3>Разбор</h3><p>Смотрю пример данных или текущий процесс, задаю уточняющие вопросы.</p></div></li>
+        <li><span>02</span><div><h3>Фиксация</h3><p>Записываем результат, критерии приёмки, срок, стоимость и исключения.</p></div></li>
+        <li><span>03</span><div><h3>Разработка</h3><p>Собираю решение и проверяю критичные сценарии на тестовых данных.</p></div></li>
+        <li><span>04</span><div><h3>Передача</h3><p>Показываю проверку, передаю код и объясняю запуск и ограничения.</p></div></li>
       </ol>
     </section>
 
     <section class="safety" aria-labelledby="safety-title">
       <div class="safety-mark" aria-hidden="true">✓</div>
-      <div><p class="eyebrow">Безопасный старт</p><h2 id="safety-title">Не присылайте пароли и токены в открытом запросе</h2></div>
-      <p>Для оценки достаточно обезличенного примера. Реальные доступы подключаются отдельно и только если без них нельзя выполнить согласованную часть работы.</p>
+      <div><p class="eyebrow">Безопасный старт</p><h2 id="safety-title">Для оценки не нужны пароли и реальные данные клиентов</h2></div>
+      <p>Пришлите обезличенный пример. Доступы подключаются отдельно, только если они нужны для согласованной работы. Токены и пароли не сохраняются в открытом коде.</p>
     </section>
 
-    <section class="cta" aria-labelledby="cta-title">
-      <p class="eyebrow">Есть небольшая задача?</p>
-      <h2 id="cta-title">Опишите исходные данные и желаемый результат</h2>
-      <p>Шаблон поможет не забыть важное: что есть сейчас, что должно получиться, срок и ориентир по бюджету.</p>
-      <a class="button light" href="https://github.com/smolaps01-hash/developer-portfolio/issues/new?template=project_request.yml">Открыть шаблон задачи <span aria-hidden="true">↗</span></a>
+    <section class="section faq" aria-labelledby="faq-title">
+      <div class="section-heading"><div><p class="eyebrow">До начала работы</p><h2 id="faq-title">Частые вопросы</h2></div><p>Коротко о цене, сроках, данных и развёртывании.</p></div>
+      <div class="faq-list">
+        <details><summary>Как определяется стоимость?</summary><p>После просмотра примера данных или сценария. Сначала фиксируется конкретный результат, затем оценивается работа. Без входных данных точная цена была бы гаданием.</p></details>
+        <details><summary>Когда можно назвать срок?</summary><p>После уточнения объёма и критериев готовности. Если задача большая или неопределённая, её лучше разделить на отдельные этапы.</p></details>
+        <details><summary>Можно ли передать реальные данные?</summary><p>Для первичной оценки — не нужно. Используйте обезличенный пример без паролей, токенов, банковских реквизитов и персональных данных.</p></details>
+        <details><summary>Входит ли хостинг и публикация?</summary><p>Только если это отдельно согласовано. Платные сервисы, домен, сервер и постоянная поддержка не включаются автоматически.</p></details>
+        <details><summary>Это реальные клиентские кейсы?</summary><p>Нет. Сейчас в портфолио размещены демонстрационные проекты с открытым кодом и тестами. Они показывают подход и качество реализации без вымышленных заказчиков.</p></details>
+      </div>
+    </section>
+
+    <section class="brief" id="brief" aria-labelledby="brief-title">
+      <div class="brief-intro">
+        <p class="eyebrow">Первый шаг — около минуты</p><h2 id="brief-title">Сформируйте понятную заявку</h2>
+        <p>Заполните только то, что уже знаете. Форма ничего не отправляет на сервер: она собирает текст, который можно скопировать и переслать в чате или на бирже, где вы нашли это портфолио.</p>
+        <div class="privacy-note"><span aria-hidden="true">◉</span><b>Данные остаются в вашем браузере</b></div>
+      </div>
+      <form class="brief-builder" id="brief-form">
+        <div class="field full"><label for="project-type">Тип задачи</label><select id="project-type" name="project-type"><option>Автоматизация CSV/Excel или отчёта</option><option>Telegram-бот</option><option>Лендинг или веб-доработка</option><option>Проверка или доработка Python-кода</option><option>Другое</option></select></div>
+        <div class="field full"><label for="current-state">Что есть сейчас <span>обязательно</span></label><textarea id="current-state" name="current-state" rows="3" required placeholder="Например: каждую неделю вручную свожу три CSV-файла в один отчёт"></textarea></div>
+        <div class="field full"><label for="desired-result">Какой результат нужен <span>обязательно</span></label><textarea id="desired-result" name="desired-result" rows="3" required placeholder="Например: загрузить файлы, проверить колонки и получить итоговый Excel"></textarea></div>
+        <div class="field"><label for="deadline">Желаемый срок</label><input id="deadline" name="deadline" type="text" placeholder="Например: до 15 ноября"></div>
+        <div class="field"><label for="budget">Ориентир по бюджету</label><input id="budget" name="budget" type="text" placeholder="Можно указать диапазон"></div>
+        <div class="field full"><label for="brief-output">Готовый текст заявки</label><textarea class="output" id="brief-output" rows="9" readonly aria-describedby="brief-status"></textarea></div>
+        <div class="brief-actions full"><button class="button light" id="copy-brief" type="button">Скопировать заявку</button><a href="https://github.com/smolaps01-hash/developer-portfolio/issues/new?template=project_request.yml">Или создать запрос на GitHub <span aria-hidden="true">↗</span></a></div>
+        <p class="form-status full" id="brief-status" role="status" aria-live="polite">Заполните два обязательных поля — текст обновится автоматически.</p>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year">2026</span> Павел · Демонстрационное портфолио</p>
-    <a href="https://github.com/smolaps01-hash/developer-portfolio">GitHub</a>
+    <div><a class="brand" href="#top" aria-label="В начало">PS<span>.</span></a><p>© <span id="year">2026</span> Павел · Демонстрационное портфолио</p></div>
+    <nav aria-label="Ссылки в подвале"><a href="#services">Задачи</a><a href="#projects">Примеры</a><a href="https://github.com/smolaps01-hash">GitHub</a></nav>
   </footer>
   <script src="app.js"></script>
 </body>
