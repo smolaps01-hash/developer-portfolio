@@ -8,6 +8,8 @@
 
 **[Открыть живую витрину](https://smolaps01-hash.github.io/developer-portfolio/)** · **[Проверить тесты](https://github.com/smolaps01-hash/developer-portfolio/actions)** · **[Описать задачу](https://github.com/smolaps01-hash/developer-portfolio/issues/new?template=project_request.yml)**
 
+![Опубликованная витрина портфолио](assets/portfolio-desktop.jpg)
+
 ## Чем могу помочь
 
 - автоматизировать обработку CSV/Excel-выгрузок и подготовку отчётов;
