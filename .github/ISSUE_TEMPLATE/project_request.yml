@@ -1,0 +1,49 @@
+name: Описать небольшую задачу
+description: Структурированный запрос на автоматизацию, бота или веб-страницу
+title: "[Задача] "
+labels: ["project-request"]
+body:
+  - type: dropdown
+    id: project-type
+    attributes:
+      label: Тип задачи
+      options:
+        - Автоматизация CSV/Excel или отчёта
+        - Telegram-бот
+        - Лендинг или доработка веб-страницы
+        - Проверка или доработка Python-кода
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: current-process
+    attributes:
+      label: Что есть сейчас
+      description: Опишите текущий процесс и приложите только обезличенный пример данных.
+      placeholder: Сейчас я вручную копирую данные из CSV в отчёт...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Какой результат нужен
+      placeholder: На выходе нужен JSON-отчёт и инструкция запуска...
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Желаемый срок
+      placeholder: Например, 5 рабочих дней
+  - type: input
+    id: budget
+    attributes:
+      label: Бюджет или диапазон
+      placeholder: Например, до 5 000 ₽
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Безопасность
+      options:
+        - label: Я не добавил(а) пароли, токены, банковские данные и персональные данные клиентов.
+          required: true

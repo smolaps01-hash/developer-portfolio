@@ -36,6 +36,15 @@ class CsvAutomationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "invalid amount"):
             summarize([{"date": "2026-10-01", "category": "Bot", "amount": "wrong", "status": "paid"}])
 
+    def test_missing_column_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory, "input.csv")
+            destination = Path(directory, "report.json")
+            source.write_text("date,category,amount\n2026-10-01,Bot,10\n", encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "Missing columns: status"):
+                build_report(source, destination)
+
 
 if __name__ == "__main__":
     unittest.main()

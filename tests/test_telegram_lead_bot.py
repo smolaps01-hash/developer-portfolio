@@ -14,6 +14,10 @@ class TelegramLeadBotTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             normalize_phone("123")
 
+    def test_letters_in_phone_are_rejected(self) -> None:
+        with self.assertRaises(ValueError):
+            normalize_phone("+7 900 ABC-45-67")
+
     def test_lead_is_saved(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             database = Path(directory, "leads.db")
@@ -27,6 +31,20 @@ class TelegramLeadBotTests(unittest.TestCase):
                 ).fetchone()
 
             self.assertEqual(row, (42, "Павел", "+79001234567", "Нужен бот"))
+
+    def test_lead_text_is_stripped_before_saving(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            database = Path(directory, "leads.db")
+            store = LeadStore(database)
+            store.initialize()
+            lead_id = store.add(Lead(7, "  Анна  ", "+7 900 123-45-67", "  Нужен отчёт  "))
+
+            with sqlite3.connect(database) as connection:
+                row = connection.execute(
+                    "SELECT name, comment FROM leads WHERE id = ?", (lead_id,)
+                ).fetchone()
+
+            self.assertEqual(row, ("Анна", "Нужен отчёт"))
 
 
 if __name__ == "__main__":

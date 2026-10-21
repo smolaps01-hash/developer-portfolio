@@ -10,7 +10,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import Message
 
-from core import Lead, LeadStore, normalize_phone
+from telegram_lead_bot.core import Lead, LeadStore, normalize_phone
 
 
 class LeadForm(StatesGroup):

@@ -21,17 +21,22 @@ class AssetParser(HTMLParser):
 
 class LandingTests(unittest.TestCase):
     def test_local_assets_exist(self) -> None:
-        html = ROOT.joinpath("landing", "index.html").read_text(encoding="utf-8")
-        parser = AssetParser()
-        parser.feed(html)
-        for asset in parser.assets:
-            if not asset.startswith(("http://", "https://", "//")):
-                self.assertTrue(ROOT.joinpath("landing", asset).is_file(), asset)
+        for directory in ("landing", "docs"):
+            html = ROOT.joinpath(directory, "index.html").read_text(encoding="utf-8")
+            parser = AssetParser()
+            parser.feed(html)
+            for asset in parser.assets:
+                if not asset.startswith(("http://", "https://", "//")):
+                    self.assertTrue(ROOT.joinpath(directory, asset).is_file(), asset)
 
     def test_form_has_accessible_status(self) -> None:
         html = ROOT.joinpath("landing", "index.html").read_text(encoding="utf-8")
         self.assertIn('role="status"', html)
         self.assertIn('aria-live="polite"', html)
+
+    def test_pages_has_mobile_viewport(self) -> None:
+        html = ROOT.joinpath("docs", "index.html").read_text(encoding="utf-8")
+        self.assertIn('name="viewport"', html)
 
 
 if __name__ == "__main__":

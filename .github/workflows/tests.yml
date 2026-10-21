@@ -3,6 +3,14 @@ name: tests
 on:
   push:
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   unittest:
@@ -12,4 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -m unittest discover -s tests -v
+      - name: Compile Python sources
+        run: python -m compileall -q csv_automation telegram_lead_bot tests
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v

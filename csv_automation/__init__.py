@@ -1,0 +1,1 @@
+"""CSV report automation example."""
