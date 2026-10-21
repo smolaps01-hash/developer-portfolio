@@ -2,6 +2,7 @@ import unittest
 import json
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,7 +29,8 @@ class LandingTests(unittest.TestCase):
             parser.feed(html)
             for asset in parser.assets:
                 if not asset.startswith(("http://", "https://", "//")):
-                    self.assertTrue(ROOT.joinpath(directory, asset).is_file(), asset)
+                    asset_path = urlsplit(asset).path
+                    self.assertTrue(ROOT.joinpath(directory, asset_path).is_file(), asset)
 
     def test_form_has_accessible_status(self) -> None:
         html = ROOT.joinpath("landing", "index.html").read_text(encoding="utf-8")
