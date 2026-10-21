@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Автоматизация рутинных процессов для малого бизнеса.">
+  <title>FlowCraft — автоматизация без лишней сложности</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="FlowCraft — на главную">FlowCraft</a>
+    <nav aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#process">Процесс</a>
+      <a class="nav-cta" href="#contact">Обсудить задачу</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Автоматизация для малого бизнеса</p>
+        <h1>Освободите время от повторяющихся задач</h1>
+        <p class="lead">Настроим обработку таблиц, уведомления и простые интеграции — с понятным результатом и инструкцией.</p>
+        <a class="button" href="#contact">Получить оценку</a>
+      </div>
+      <div class="metric-card" aria-label="Преимущества подхода">
+        <span>01</span><strong>Фиксируем результат</strong>
+        <span>02</span><strong>Делаем прототип</strong>
+        <span>03</span><strong>Тестируем сценарий</strong>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <p class="eyebrow">Что можно автоматизировать</p>
+      <div class="cards">
+        <article><h2>Таблицы и отчёты</h2><p>Очистка данных, расчёты и регулярные выгрузки.</p></article>
+        <article><h2>Telegram-уведомления</h2><p>Заявки, напоминания и сообщения ответственным.</p></article>
+        <article><h2>Интеграции</h2><p>Передача данных между сервисами через API.</p></article>
+      </div>
+    </section>
+
+    <section id="process" class="section process">
+      <div><p class="eyebrow">Как работаем</p><h2>Небольшими проверяемыми этапами</h2></div>
+      <ol>
+        <li><strong>Разбор</strong><span>Уточняем исходные данные и критерии приёмки.</span></li>
+        <li><strong>Реализация</strong><span>Собираем минимальное рабочее решение.</span></li>
+        <li><strong>Проверка</strong><span>Тестируем и передаём инструкцию.</span></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div><p class="eyebrow">Обсудить задачу</p><h2>Опишите процесс, который отнимает время</h2></div>
+      <form id="contact-form" novalidate>
+        <label>Имя<input name="name" autocomplete="name" required minlength="2"></label>
+        <label>Телефон или Telegram<input name="contact" required minlength="5"></label>
+        <label>Что нужно автоматизировать<textarea name="message" required minlength="10"></textarea></label>
+        <button class="button" type="submit">Отправить</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>Демонстрационный проект · 2026</footer>
+</body>
+</html>
+
